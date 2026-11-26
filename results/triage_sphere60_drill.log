@@ -1,0 +1,20 @@
+world 0: eval index 122, sphere60 mu=0.05 dx=0.0 theta0=(0.0502, 0.0519, 0.3379) h=(0.0059, 0.0074, 0.00753) recorded_nonfinite=True
+world 1: eval index 123, sphere60 mu=0.05 dx=0.008 theta0=(0.0502, 0.0519, 0.3379) h=(0.0059, 0.0074, 0.00753) recorded_nonfinite=True
+  s = (x.conj() * x).real
+  settle   world 0: joint angle [-0.07, +0.38] rad, peak speed 0.20 m/s, peak tension 0.0 N, object z 0.092
+  settle   world 1: joint angle [-0.07, +0.38] rad, peak speed 0.20 m/s, peak tension 0.0 N, object z 0.092
+  close    world 0: joint angle [-0.38, +1.18] rad, peak speed 0.21 m/s, peak tension 15.0 N, object z 0.092
+  close    world 1: joint angle [-0.38, +1.18] rad, peak speed 0.23 m/s, peak tension 15.0 N, object z 0.092
+  hold     world 0: joint angle [-0.40, +1.19] rad, peak speed 0.24 m/s, peak tension 15.9 N, object z 0.092
+  hold     world 1: joint angle [-0.40, +1.19] rad, peak speed 0.24 m/s, peak tension 15.9 N, object z 0.092
+  world 0: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'slider_travel']
+    drill substep  0: max |v| 1.20 m/s (body 3), max |w| 16.6 rad/s (body 5), tension max 2.7 N
+    drill substep  8: max |v| 1.12 m/s (body 7), max |w| 15.6 rad/s (body 5), tension max 2.5 N
+    drill substep 16: max |v| 1.03 m/s (body 3), max |w| 14.6 rad/s (body 1), tension max 2.3 N
+    drill substep 24: max |v| 0.93 m/s (body 3), max |w| 13.3 rad/s (body 1), tension max 2.2 N
+    drill substep 32: max |v| 0.83 m/s (body 3), max |w| 41.0 rad/s (body 5), tension max 2.2 N
+    drill substep 40: max |v| 168.96 m/s (body 7), max |w| 7314.4 rad/s (body 6), tension max 320.7 N
+    drill world 0: substep 44 of 64: first non-finite bodies ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13']; rigid contacts in batch 30
+    last finite substep, per body |v| [m/s]: [0.0, 0.2199999988079071, 0.550000011920929, 0.6800000071525574, 8.930000305175781, 118.87999725341797, 197.16000366210938, 142.67999267578125, 0.0, 0.18000000715255737, 0.46000000834465027, 0.5600000023841858, 0.12999999523162842, 0.1899999976158142]
+    last finite substep, per body |w| [rad/s]: [0.0, 9.800000190734863, 7.900000095367432, 1.600000023841858, 0.0, inf, inf, 616691776.0, 0.0, 8.100000381469727, 6.400000095367432, 1.399999976158142, 0.0, 1.399999976158142]
+    last finite joint angles [rad]: [0.9369999766349792, 0.38499999046325684, 0.5950000286102295, -1.5709999799728394, 1.5160000324249268, -2.8399999141693115, 0.9229999780654907, 0.3889999985694885, 0.6019999980926514] object pos: [0.005400000140070915, -0.0, 0.04800000041723251]

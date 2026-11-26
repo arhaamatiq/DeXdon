@@ -1,0 +1,4 @@
+  world 0: FIRST NON-FINITE at frame 153 (shake +0.233s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object
+  world 1: FIRST NON-FINITE at frame 154 (shake +0.250s): ['link1', 'link2', 'link3', 'link9', 'link10', 'link11', 'table12', 'object13', 'slider_travel']
+summary: [(0, (153, 'shake', 14)), (1, (154, 'shake', 15)), (2, None), (3, None), (4, None), (5, None), (6, None)]
+DONE

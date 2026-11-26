@@ -1,0 +1,11 @@
+  world 0: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'sl
+  world 2: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'sl
+  world 3: FIRST NON-FINITE at frame 108 (retract +0.283s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'sl
+  world 1: FIRST NON-FINITE at frame 110 (retract +0.317s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'sl
+  world 5: FIRST NON-FINITE at frame 111 (retract +0.333s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'sl
+  world 4: FIRST NON-FINITE at frame 163 (shake +0.400s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'slid
+  world 6: FIRST NON-FINITE at frame 165 (shake +0.433s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'slid
+  shake    world 4: joint angle [-0.30, +1.15] rad, peak speed 1.50 m/s, peak tension 17.1 N, object z 0.019
+  shake    world 6: joint angle [-1.68, +2.95] rad, peak speed 198.46 m/s, peak tension 184.7 N, object z 0.062
+summary: [(0, (107, 'retract', 16)), (1, (110, 'retract', 19)), (2, (107, 'retract', 16)), (3, (108, 'retract', 17)), (4, (163, 'shake', 24)), (5, (111, 'retract', 20)), 
+DONE

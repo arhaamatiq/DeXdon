@@ -1,0 +1,10 @@
+[project]
+name = "dexdon"
+version = "0.1.0"
+description = "How capstan friction changes an underactuated tendon-driven robot hand, on Newton's massless routed tendons"
+requires-python = ">=3.11"
+dependencies = ["numpy", "matplotlib", "pillow", "imageio-ffmpeg"]
+# Newton is installed from source at the pinned commit; see README "Setup".
+
+[tool.ruff]
+line-length = 160

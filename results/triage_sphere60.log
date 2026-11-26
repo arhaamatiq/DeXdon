@@ -1,0 +1,35 @@
+world 0: eval index 122, sphere60 mu=0.05 dx=0.0 theta0=(0.0502, 0.0519, 0.3379) h=(0.0059, 0.0074, 0.00753) recorded_nonfinite=True
+world 1: eval index 123, sphere60 mu=0.05 dx=0.008 theta0=(0.0502, 0.0519, 0.3379) h=(0.0059, 0.0074, 0.00753) recorded_nonfinite=True
+world 2: eval index 130, sphere60 mu=0.15 dx=0.0 theta0=(0.0502, 0.0519, 0.3379) h=(0.0059, 0.0074, 0.00753) recorded_nonfinite=True
+world 3: eval index 2, sphere60 mu=0.05 dx=0.0 theta0=(0.205, 0.1407, 0.3125) h=(0.00601, 0.01062, 0.00965) recorded_nonfinite=False
+  settle   world 0: joint angle [-0.30, +0.37] rad, peak speed 1.65 m/s, peak tension 0.5 N, object z 0.092
+  settle   world 1: joint angle [-0.30, +0.40] rad, peak speed 2.50 m/s, peak tension 0.0 N, object z 0.092
+  settle   world 2: joint angle [-0.30, +0.37] rad, peak speed 1.65 m/s, peak tension 0.5 N, object z 0.092
+  settle   world 3: joint angle [-0.23, +0.33] rad, peak speed 1.58 m/s, peak tension 3.0 N, object z 0.092
+  close    world 0: joint angle [-0.30, +1.20] rad, peak speed 0.08 m/s, peak tension 14.3 N, object z 0.098
+  close    world 1: joint angle [-0.30, +1.20] rad, peak speed 0.12 m/s, peak tension 14.3 N, object z 0.098
+  close    world 2: joint angle [-0.30, +1.20] rad, peak speed 0.08 m/s, peak tension 14.1 N, object z 0.098
+  close    world 3: joint angle [-0.30, +0.96] rad, peak speed 0.05 m/s, peak tension 14.2 N, object z 0.098
+  hold     world 0: joint angle [-0.30, +1.20] rad, peak speed 0.01 m/s, peak tension 14.2 N, object z 0.098
+  hold     world 1: joint angle [-0.30, +1.20] rad, peak speed 0.01 m/s, peak tension 14.3 N, object z 0.098
+  hold     world 2: joint angle [-0.30, +1.20] rad, peak speed 0.00 m/s, peak tension 14.1 N, object z 0.098
+  hold     world 3: joint angle [-0.30, +0.96] rad, peak speed 0.01 m/s, peak tension 14.2 N, object z 0.098
+  retract  world 0: joint angle [-0.30, +1.20] rad, peak speed 0.07 m/s, peak tension 14.2 N, object z 0.098
+  retract  world 1: joint angle [-0.30, +1.20] rad, peak speed 0.07 m/s, peak tension 14.2 N, object z 0.098
+  retract  world 2: joint angle [-0.30, +1.20] rad, peak speed 0.07 m/s, peak tension 14.6 N, object z 0.098
+  retract  world 3: joint angle [-0.30, +0.96] rad, peak speed 0.07 m/s, peak tension 14.2 N, object z 0.098
+  hold2    world 0: joint angle [-0.30, +1.20] rad, peak speed 0.02 m/s, peak tension 14.2 N, object z 0.098
+  hold2    world 1: joint angle [-0.30, +1.20] rad, peak speed 0.02 m/s, peak tension 14.2 N, object z 0.098
+  hold2    world 2: joint angle [-0.30, +1.20] rad, peak speed 0.01 m/s, peak tension 14.6 N, object z 0.098
+  hold2    world 3: joint angle [-0.30, +0.96] rad, peak speed 0.01 m/s, peak tension 14.3 N, object z 0.098
+  world 2: FIRST NON-FINITE at frame 163 (shake +0.400s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'slider_travel']
+  world 0: FIRST NON-FINITE at frame 172 (shake +0.550s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'slider_travel']
+  world 1: FIRST NON-FINITE at frame 173 (shake +0.567s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object13', 'slider_travel']
+  shake    world 0: joint angle [-0.30, +1.20] rad, peak speed 55.71 m/s, peak tension 16.1 N, object z 0.072
+  shake    world 1: joint angle [-0.30, +1.25] rad, peak speed 55.64 m/s, peak tension 16.3 N, object z 0.069
+  shake    world 2: joint angle [-0.30, +1.42] rad, peak speed 50.02 m/s, peak tension 71.6 N, object z 0.012
+  shake    world 3: joint angle [-0.30, +0.96] rad, peak speed 0.29 m/s, peak tension 15.8 N, object z 0.098
+  open     world 3: joint angle [-0.30, +0.96] rad, peak speed 1.41 m/s, peak tension 14.3 N, object z 0.012
+  wait     world 3: joint angle [-0.08, +0.44] rad, peak speed 1.07 m/s, peak tension 0.0 N, object z 0.012
+tendon ERROR lines captured: 0 []
+summary: [(0, (172, 'shake', 33)), (1, (173, 'shake', 34)), (2, (163, 'shake', 24)), (3, None)]

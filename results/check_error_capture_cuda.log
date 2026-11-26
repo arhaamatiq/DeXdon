@@ -1,0 +1,6 @@
+Warp 1.19.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.2
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+Module __main__ 069d5b6 load on device 'cuda:0' took 6.78 ms  (cached)
+device cuda:0, graph replay True: captured 2 ERROR lines, worlds flagged [2, 1333]
+OK: diagnostics printed inside the captured step are logged and mapped to worlds

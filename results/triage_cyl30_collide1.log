@@ -1,0 +1,4 @@
+  world 3: FIRST NON-FINITE at frame 175 (shake +0.600s): ['link1', 'link2', 'link3']
+  world 2: FIRST NON-FINITE at frame 176 (shake +0.617s): ['link1', 'link2', 'link3']
+summary: [(0, None), (1, None), (2, (176, 'shake', 37)), (3, (175, 'shake', 36)), (4, None), (5, None), (6, None)]
+DONE

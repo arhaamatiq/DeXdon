@@ -1,0 +1,6 @@
+Ran 1228 tests in 816.293s
+FAILED (failures=2, skipped=79)
+test_articulation_contact_drift_cpu (test_solver_xpbd.TestSolverXPBD.test_articulation_contact_drift_cpu) ... FAIL
+test_ball_joint_recovers_from_large_anchor_separation_cpu (test_solver_xpbd.TestSolverXPBD.test_ball_joint_recovers_from_large_anchor_separation_cpu) ... FAIL
+AssertionError: 0.0498626831134737 not less than 0.01 : Root body drifted 0.0499 m laterally over 3 seconds (dx=0.0000, dy=0.0499, max allowed: 0.01)
+AssertionError: 0.5513229370117188 not less than 0.5 : Ball joint did not recover from a large anchor separation: gap=0.551323 m

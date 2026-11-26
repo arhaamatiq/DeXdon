@@ -1,0 +1,12 @@
+VARIANT newton_defaults_A: invalid 0.0000 (0/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0000 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.0, np.str_('cyl30'): 0.0, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+VARIANT newton_defaults_B: invalid 0.0006 (1/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0015 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.0, np.str_('cyl30'): 0.004, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+  first value to break (same substep ties joined): {'link': 1}
+  phase of first break: {'shake': 1}
+VARIANT newton_defaults_main: invalid 0.0000 (0/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0000 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.0, np.str_('cyl30'): 0.0, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+VARIANTS_DONE

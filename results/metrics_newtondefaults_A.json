@@ -1,0 +1,70 @@
+{
+ "source": "results/cycle_newtondefaults_A.npz",
+ "meta": {
+  "params": {},
+  "cfg": {
+   "substeps": 64,
+   "iterations": 32,
+   "joint_relaxation": 0.7,
+   "joint_angular_relaxation": 0.4
+  },
+  "x_max": 0.02,
+  "t_ramp": 4.0
+ },
+ "e1": {
+  "0": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.004624295718915539,
+   "angle_err_rms_rad": 0.0025650901239270916,
+   "angle_err_max_deg": 0.2649526279142752,
+   "angle_range_rad": 0.7215906381607056,
+   "tension_err_max_rel": 0.10088792462294982,
+   "tension_err_rms_rel": 0.011999423605640847,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.0037270149700063815,
+   "angle_err_rms_rad": 0.0019340234282449985,
+   "angle_err_max_deg": 0.21354222796344277,
+   "angle_range_rad": 0.8943800926208496,
+   "tension_err_max_rel": 0.0981362397876171,
+   "tension_err_rms_rel": 0.011479469532219644,
+   "tendon_errors": 0
+  }
+ },
+ "e2": {
+  "0": {
+   "loop_work_mJ": -0.6645197093005373,
+   "loop_work_analytic_mJ": 0.0,
+   "loop_work_sim_same_window_mJ": -0.565030197339234,
+   "force_gap_max_N": 0.07089835171304781,
+   "joint_gap_max_rad": [
+    0.0049566184497540355,
+    0.0013933683743194702,
+    0.003437470070411175
+   ],
+   "total_flexion_gap_max_rad": 0.0001937343107864531,
+   "fingertip_gap_max_mm": 0.3163197264724751,
+   "unload_angle_err_max_rad": 0.0028236880359116534,
+   "unload_tension_err_max_rel": 0.03031530917182579,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "loop_work_mJ": 27.077702487770917,
+   "loop_work_analytic_mJ": 27.05665567603803,
+   "loop_work_sim_same_window_mJ": 23.57597921146096,
+   "force_gap_max_N": 2.9190128610219217,
+   "joint_gap_max_rad": [
+    0.17319847015805545,
+    0.10335324302125626,
+    0.1527427211283902
+   ],
+   "total_flexion_gap_max_rad": 0.004416262386861769,
+   "fingertip_gap_max_mm": 11.05096624317909,
+   "unload_angle_err_max_rad": 0.0031385205233935287,
+   "unload_tension_err_max_rel": 0.03128150964449827,
+   "tendon_errors": 0
+  }
+ }
+}

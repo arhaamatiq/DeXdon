@@ -1,0 +1,70 @@
+{
+ "source": "results/cycle_tol.npz",
+ "meta": {
+  "params": {},
+  "cfg": {
+   "substeps": 64,
+   "iterations": 32,
+   "tendon_settle_tol": 0.0001,
+   "tendon_settle_atol": 1e-07
+  },
+  "x_max": 0.02,
+  "t_ramp": 4.0
+ },
+ "e1": {
+  "0": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.0034299775402454324,
+   "angle_err_rms_rad": 0.0013906493309875265,
+   "angle_err_max_deg": 0.19652323688072676,
+   "angle_range_rad": 0.7197647094726562,
+   "tension_err_max_rel": 0.11224743351141175,
+   "tension_err_rms_rel": 0.013330341145986165,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.0033589096327889395,
+   "angle_err_rms_rad": 0.0010335648183569383,
+   "angle_err_max_deg": 0.1924513457246434,
+   "angle_range_rad": 0.8924648761749268,
+   "tension_err_max_rel": 0.10535346376919885,
+   "tension_err_rms_rel": 0.012594410252018831,
+   "tendon_errors": 0
+  }
+ },
+ "e2": {
+  "0": {
+   "loop_work_mJ": -0.8739535941429261,
+   "loop_work_analytic_mJ": 0.0,
+   "loop_work_sim_same_window_mJ": -0.7513611509381531,
+   "force_gap_max_N": 0.07519643527615205,
+   "joint_gap_max_rad": [
+    0.003969973764619161,
+    0.0009342827848943802,
+    0.0028202443632778795
+   ],
+   "total_flexion_gap_max_rad": 0.00022440981386390169,
+   "fingertip_gap_max_mm": 0.25937435958957983,
+   "unload_angle_err_max_rad": 0.0017297133170831591,
+   "unload_tension_err_max_rel": 0.028913986090055355,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "loop_work_mJ": 26.86265796611767,
+   "loop_work_analytic_mJ": 27.05665567603803,
+   "loop_work_sim_same_window_mJ": 23.378854244151835,
+   "force_gap_max_N": 2.9079186619826665,
+   "joint_gap_max_rad": [
+    0.17244770675349452,
+    0.10318384191054142,
+    0.15264868371735407
+   ],
+   "total_flexion_gap_max_rad": 0.004335440073487629,
+   "fingertip_gap_max_mm": 11.002062502894328,
+   "unload_angle_err_max_rad": 0.002081514411638674,
+   "unload_tension_err_max_rel": 0.02987097572491626,
+   "tendon_errors": 0
+  }
+ }
+}

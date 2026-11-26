@@ -1,0 +1,69 @@
+{
+ "source": "results/cycle_sweeps.npz",
+ "meta": {
+  "params": {},
+  "cfg": {
+   "substeps": 64,
+   "iterations": 32,
+   "tendon_max_sweeps": 1024
+  },
+  "x_max": 0.02,
+  "t_ramp": 4.0
+ },
+ "e1": {
+  "0": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.003518602634526316,
+   "angle_err_rms_rad": 0.0016636071754685831,
+   "angle_err_max_deg": 0.2016010807419704,
+   "angle_range_rad": 0.7206124663352966,
+   "tension_err_max_rel": 0.1091865205635334,
+   "tension_err_rms_rel": 0.01282154516628899,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.0034110908601073936,
+   "angle_err_rms_rad": 0.0014137718420797207,
+   "angle_err_max_deg": 0.19544110981980356,
+   "angle_range_rad": 0.8932682871818542,
+   "tension_err_max_rel": 0.10354849523953691,
+   "tension_err_rms_rel": 0.012195854815133257,
+   "tendon_errors": 0
+  }
+ },
+ "e2": {
+  "0": {
+   "loop_work_mJ": -0.6503528596671498,
+   "loop_work_analytic_mJ": 0.0,
+   "loop_work_sim_same_window_mJ": -0.5527891539866394,
+   "force_gap_max_N": 0.0712089671655336,
+   "joint_gap_max_rad": [
+    0.005044728502233697,
+    0.001299645652112158,
+    0.0035984057469733433
+   ],
+   "total_flexion_gap_max_rad": 0.00019248795403786767,
+   "fingertip_gap_max_mm": 0.32541991191696246,
+   "unload_angle_err_max_rad": 0.0013530821391745662,
+   "unload_tension_err_max_rel": 0.027181143604148028,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "loop_work_mJ": 27.04566339197764,
+   "loop_work_analytic_mJ": 27.05665567603803,
+   "loop_work_sim_same_window_mJ": 23.546554897953598,
+   "force_gap_max_N": 2.9180256756152803,
+   "joint_gap_max_rad": [
+    0.1734352867579685,
+    0.10355578527275566,
+    0.15313872760062436
+   ],
+   "total_flexion_gap_max_rad": 0.004387412113339151,
+   "fingertip_gap_max_mm": 11.056444627793512,
+   "unload_angle_err_max_rad": 0.0016549463021698907,
+   "unload_tension_err_max_rel": 0.0280207657804461,
+   "tendon_errors": 0
+  }
+ }
+}

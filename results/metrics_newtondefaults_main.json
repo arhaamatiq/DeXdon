@@ -1,0 +1,70 @@
+{
+ "source": "results/cycle_newtondefaults_main.npz",
+ "meta": {
+  "params": {},
+  "cfg": {
+   "substeps": 64,
+   "iterations": 32,
+   "joint_relaxation": 0.7,
+   "joint_angular_relaxation": 0.4
+  },
+  "x_max": 0.02,
+  "t_ramp": 4.0
+ },
+ "e1": {
+  "0": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.004490209378555043,
+   "angle_err_rms_rad": 0.002341125878257829,
+   "angle_err_max_deg": 0.2572700465212642,
+   "angle_range_rad": 0.7114356756210327,
+   "tension_err_max_rel": 0.2411178339211184,
+   "tension_err_rms_rel": 0.14423368156755834,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.07338911668006776,
+   "angle_err_rms_rad": 0.020664928979992933,
+   "angle_err_max_deg": 4.204886647961034,
+   "angle_range_rad": 0.8104342818260193,
+   "tension_err_max_rel": 0.27243457990175357,
+   "tension_err_rms_rel": 0.15952696209892478,
+   "tendon_errors": 0
+  }
+ },
+ "e2": {
+  "0": {
+   "loop_work_mJ": -0.5990053757955749,
+   "loop_work_analytic_mJ": 0.0,
+   "loop_work_sim_same_window_mJ": -0.5209592523578435,
+   "force_gap_max_N": 0.05635775343430571,
+   "joint_gap_max_rad": [
+    0.0022615881261957016,
+    0.0006287133767481912,
+    0.0016285511111443496
+   ],
+   "total_flexion_gap_max_rad": 0.00020079693224261952,
+   "fingertip_gap_max_mm": 0.14380846928076257,
+   "unload_angle_err_max_rad": 0.0028208505749331425,
+   "unload_tension_err_max_rel": 0.12164952292717168,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "loop_work_mJ": 35.501835405570894,
+   "loop_work_analytic_mJ": 27.05665567603803,
+   "loop_work_sim_same_window_mJ": 31.154308310935804,
+   "force_gap_max_N": 4.384165814415709,
+   "joint_gap_max_rad": [
+    0.12856853484182984,
+    0.06685710109377263,
+    0.13951211214725923
+   ],
+   "total_flexion_gap_max_rad": 0.006634674218107373,
+   "fingertip_gap_max_mm": 9.411191899460956,
+   "unload_angle_err_max_rad": 0.010137957434635692,
+   "unload_tension_err_max_rel": 0.11292315806906439,
+   "tendon_errors": 0
+  }
+ }
+}

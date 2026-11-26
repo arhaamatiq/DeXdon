@@ -1,0 +1,13 @@
+newton 1.9.0.dev0, warp 1.19.0, dt = 1/3840 s
+A) pendulum period [s]
+   linear_relaxation=0.7 angular_relaxation=0.4 iterations= 2: sim 0.9790  theory 0.8982  ratio 1.0900
+   linear_relaxation=0.7 angular_relaxation=0.4 iterations=16: sim 0.9790  theory 0.8982  ratio 1.0900
+   linear_relaxation=0.7 angular_relaxation=0.7 iterations= 2: sim 0.8982  theory 0.8982  ratio 1.0000
+   linear_relaxation=1.0 angular_relaxation=1.0 iterations= 2: sim 0.8982  theory 0.8982  ratio 1.0000
+   linear_relaxation=0.4 angular_relaxation=0.7 iterations= 2: sim 0.8485  theory 0.8982  ratio 0.9447
+B) drive deflection under constant torque [rad] (theory tau/k)
+   iterations= 1: sim 0.24343  theory 0.10000  effective stiffness / target_ke = 0.411
+   iterations= 2: sim 0.11524  theory 0.10000  effective stiffness / target_ke = 0.868
+   iterations= 4: sim 0.06285  theory 0.10000  effective stiffness / target_ke = 1.591
+   iterations= 8: sim 0.03143  theory 0.10000  effective stiffness / target_ke = 3.181
+   iterations=16: sim 0.02002  theory 0.10000  effective stiffness / target_ke = 4.995

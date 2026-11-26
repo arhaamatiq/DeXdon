@@ -1,0 +1,8 @@
+  world 0: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'obje
+  world 1: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'obje
+  world 2: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'obje
+  world 3: FIRST NON-FINITE at frame 107 (retract +0.267s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'obje
+  world 5: FIRST NON-FINITE at frame 109 (retract +0.300s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'obje
+  world 6: FIRST NON-FINITE at frame 166 (shake +0.450s): ['link1', 'link2', 'link3', 'link5', 'link6', 'link7', 'link9', 'link10', 'link11', 'table12', 'object
+summary: [(0, (107, 'retract', 16)), (1, (107, 'retract', 16)), (2, (107, 'retract', 16)), (3, (107, 'retract', 16)), (4, None), (5, (109, 'retract', 18)), (6, 
+DONE

@@ -1,0 +1,34 @@
+diff --git a/newton/_src/solvers/xpbd/kernels.py b/newton/_src/solvers/xpbd/kernels.py
+index 151b300..285b8b2 100644
+--- a/newton/_src/solvers/xpbd/kernels.py
++++ b/newton/_src/solvers/xpbd/kernels.py
+@@ -1149,10 +1149,10 @@ def solve_body_joints(
+ 
+             # A positional row applies one impulse; its linear and angular parts
+             # must share one relaxation factor to keep the correction mass-weighted.
+-            lin_delta_p += linear_p * (d_lambda * linear_relaxation)
+-            ang_delta_p += angular_p * (d_lambda * linear_relaxation)
+-            lin_delta_c += linear_c * (d_lambda * linear_relaxation)
+-            ang_delta_c += angular_c * (d_lambda * linear_relaxation)
++            lin_delta_p += linear_p * (d_lambda * angular_relaxation)
++            ang_delta_p += angular_p * (d_lambda * angular_relaxation)
++            lin_delta_c += linear_c * (d_lambda * angular_relaxation)
++            ang_delta_c += angular_c * (d_lambda * angular_relaxation)
+ 
+     else:
+         # compute joint target, stiffness, damping
+@@ -1306,10 +1306,10 @@ def solve_body_joints(
+                 )
+ 
+                 # Same impulse, same relaxation factor for both parts (see above).
+-                lin_delta_p += linear_p * (d_lambda * linear_relaxation)
+-                ang_delta_p += angular_p * (d_lambda * linear_relaxation)
+-                lin_delta_c += linear_c * (d_lambda * linear_relaxation)
+-                ang_delta_c += angular_c * (d_lambda * linear_relaxation)
++                lin_delta_p += linear_p * (d_lambda * angular_relaxation)
++                ang_delta_p += angular_p * (d_lambda * angular_relaxation)
++                lin_delta_c += linear_c * (d_lambda * angular_relaxation)
++                ang_delta_c += angular_c * (d_lambda * angular_relaxation)
+ 
+     if type == JointType.D6 and ang_axis_count >= 2:
+         # constrain the intrinsic-Euler coordinates used by eval_fk, one per angular DOF

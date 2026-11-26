@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+results/*.log
+!results/repro_*.log
+!results/negctl_detached.log
+!results/triage_*.log
+!results/rates_summary.log
+!results/check_error_capture_cuda.log
+!results/xpbd_variants/*

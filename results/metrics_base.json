@@ -1,0 +1,146 @@
+{
+ "source": "results/cycle_base.npz",
+ "meta": {
+  "params": {},
+  "cfg": {
+   "substeps": 64,
+   "iterations": 32
+  },
+  "x_max": 0.02,
+  "t_ramp": 4.0
+ },
+ "e1": {
+  "0": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.003518429430578243,
+   "angle_err_rms_rad": 0.0016618163021081675,
+   "angle_err_max_deg": 0.2015911568867508,
+   "angle_range_rad": 0.7205918431282043,
+   "tension_err_max_rel": 0.10848755918499076,
+   "tension_err_rms_rel": 0.012807515780882758,
+   "tendon_errors": 0
+  },
+  "0.1": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.0034375297031193908,
+   "angle_err_rms_rad": 0.001420102436952225,
+   "angle_err_max_deg": 0.19695594393959995,
+   "angle_range_rad": 0.7773671746253967,
+   "tension_err_max_rel": 0.10707403783742464,
+   "tension_err_rms_rel": 0.012476217076696725,
+   "tendon_errors": 0
+  },
+  "0.2": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.003412520153691756,
+   "angle_err_rms_rad": 0.0014207112830861806,
+   "angle_err_max_deg": 0.19552300230987266,
+   "angle_range_rad": 0.8352402448654175,
+   "tension_err_max_rel": 0.10512302443684163,
+   "tension_err_rms_rel": 0.0123507748797065,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.003410203250621663,
+   "angle_err_rms_rad": 0.0014100223826204472,
+   "angle_err_max_deg": 0.1953902535424154,
+   "angle_range_rad": 0.8932698965072632,
+   "tension_err_max_rel": 0.10238172809280233,
+   "tension_err_rms_rel": 0.012162932099934678,
+   "tendon_errors": 0
+  },
+  "0.5": {
+   "n_samples": 287,
+   "angle_err_max_rad": 0.003412994430658775,
+   "angle_err_rms_rad": 0.001399829409816253,
+   "angle_err_max_deg": 0.1955501763784031,
+   "angle_range_rad": 1.0065202713012695,
+   "tension_err_max_rel": 0.10049227704848973,
+   "tension_err_rms_rel": 0.011975129252081744,
+   "tendon_errors": 0
+  }
+ },
+ "e2": {
+  "0": {
+   "loop_work_mJ": -0.6514848709537335,
+   "loop_work_analytic_mJ": 0.0,
+   "loop_work_sim_same_window_mJ": -0.5539799050832518,
+   "force_gap_max_N": 0.07119099893332748,
+   "joint_gap_max_rad": [
+    0.0050463323962373074,
+    0.0013242048493748992,
+    0.003607719253261532
+   ],
+   "total_flexion_gap_max_rad": 0.00018979536732988134,
+   "fingertip_gap_max_mm": 0.3244832207371229,
+   "unload_angle_err_max_rad": 0.001356397616704641,
+   "unload_tension_err_max_rel": 0.02707944897047221,
+   "tendon_errors": 0
+  },
+  "0.1": {
+   "loop_work_mJ": 9.54741128194031,
+   "loop_work_analytic_mJ": 8.897631415072338,
+   "loop_work_sim_same_window_mJ": 8.224751555070444,
+   "force_gap_max_N": 1.187911172244264,
+   "joint_gap_max_rad": [
+    0.08794171275625906,
+    0.028627878177490684,
+    0.08686900777680118
+   ],
+   "total_flexion_gap_max_rad": 0.0014583441046895906,
+   "fingertip_gap_max_mm": 6.215914248240889,
+   "unload_angle_err_max_rad": 0.0012582293419006185,
+   "unload_tension_err_max_rel": 0.026971982393577454,
+   "tendon_errors": 0
+  },
+  "0.2": {
+   "loop_work_mJ": 18.553768094217883,
+   "loop_work_analytic_mJ": 17.886052182383875,
+   "loop_work_sim_same_window_mJ": 16.228799391639217,
+   "force_gap_max_N": 2.116916735775356,
+   "joint_gap_max_rad": [
+    0.13147442616468247,
+    0.07365177443506343,
+    0.13112406283342454
+   ],
+   "total_flexion_gap_max_rad": 0.0030303287516124655,
+   "fingertip_gap_max_mm": 9.412356203149484,
+   "unload_angle_err_max_rad": 0.0012356146203862939,
+   "unload_tension_err_max_rel": 0.027467526117087804,
+   "tendon_errors": 0
+  },
+  "0.3": {
+   "loop_work_mJ": 27.042835379410157,
+   "loop_work_analytic_mJ": 27.05665567603803,
+   "loop_work_sim_same_window_mJ": 23.54462740554649,
+   "force_gap_max_N": 2.9175136155005283,
+   "joint_gap_max_rad": [
+    0.17341455464994682,
+    0.10353929326136091,
+    0.15320610976776494
+   ],
+   "total_flexion_gap_max_rad": 0.004402814601798255,
+   "fingertip_gap_max_mm": 11.054308987422024,
+   "unload_angle_err_max_rad": 0.0016261592327634355,
+   "unload_tension_err_max_rel": 0.02785554689318248,
+   "tendon_errors": 0
+  },
+  "0.5": {
+   "loop_work_mJ": 43.88048098682751,
+   "loop_work_analytic_mJ": 46.31639184873304,
+   "loop_work_sim_same_window_mJ": 37.61232266845211,
+   "force_gap_max_N": 4.629522951100068,
+   "joint_gap_max_rad": [
+    0.22326716779075217,
+    0.14423791016660903,
+    0.16152030904191156
+   ],
+   "total_flexion_gap_max_rad": 0.0072931584262052596,
+   "fingertip_gap_max_mm": 12.000668373880968,
+   "unload_angle_err_max_rad": 0.0028573886036860063,
+   "unload_tension_err_max_rel": 0.028255113817413857,
+   "tendon_errors": 0
+  }
+ }
+}

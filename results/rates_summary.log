@@ -1,0 +1,35 @@
+VARIANT base: invalid 0.6078 (953/1568), non-finite 0.4273, tendon ERROR worlds 0
+  tendon mu=0 0.6443 | tendon mu=0.3 0.5476 | per-joint 0.6786
+  by object: {np.str_('box40'): 0.616, np.str_('box50'): 0.955, np.str_('cyl30'): 0.25, np.str_('cyl40'): 0.384, np.str_('cyl50'): 0.621, np.str_('sphere50'): 0.491, np.str_('sphere60'): 0.938}
+  first value to break (same substep ties joined): {'link': 933, 'tendon_tension + link': 20}
+  phase of first break: {'close': 374, 'hold': 31, 'retract': 118, 'hold2': 11, 'shake': 404, 'open': 15}
+VARIANT relax05: invalid 0.0000 (0/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0000 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.0, np.str_('cyl30'): 0.0, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+VARIANT relax04: invalid 0.0000 (0/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0000 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.0, np.str_('cyl30'): 0.0, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+VARIANT relax06: invalid 0.0000 (0/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0000 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.0, np.str_('cyl30'): 0.0, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+VARIANT relax07: invalid 0.0013 (2/1568), non-finite 0.0000, tendon ERROR worlds 0
+  tendon mu=0 0.0030 | tendon mu=0.3 0.0000 | per-joint 0.0000
+  by object: {np.str_('box40'): 0.0, np.str_('box50'): 0.004, np.str_('cyl30'): 0.004, np.str_('cyl40'): 0.0, np.str_('cyl50'): 0.0, np.str_('sphere50'): 0.0, np.str_('sphere60'): 0.0}
+  first value to break (same substep ties joined): {'link': 2}
+  phase of first break: {'close': 1, 'shake': 1}
+VARIANT jointf: invalid 0.6040 (947/1568), non-finite 0.4375, tendon ERROR worlds 0
+  tendon mu=0 0.6369 | tendon mu=0.3 0.5506 | per-joint 0.6652
+  by object: {np.str_('box40'): 0.585, np.str_('box50'): 0.964, np.str_('cyl30'): 0.25, np.str_('cyl40'): 0.379, np.str_('cyl50'): 0.612, np.str_('sphere50'): 0.504, np.str_('sphere60'): 0.933}
+  first value to break (same substep ties joined): {'link': 931, 'tendon_tension + link': 16}
+  phase of first break: {'close': 378, 'hold': 33, 'retract': 115, 'hold2': 9, 'shake': 400, 'open': 12}
+VARIANT collide1: invalid 0.6135 (962/1568), non-finite 0.4598, tendon ERROR worlds 0
+  tendon mu=0 0.6518 | tendon mu=0.3 0.5357 | per-joint 0.7321
+  by object: {np.str_('box40'): 0.536, np.str_('box50'): 0.964, np.str_('cyl30'): 0.268, np.str_('cyl40'): 0.379, np.str_('cyl50'): 0.616, np.str_('sphere50'): 0.594, np.str_('sphere60'): 0.938}
+  first value to break (same substep ties joined): {'link': 943, 'tendon_tension + link': 19}
+  phase of first break: {'close': 400, 'hold': 27, 'retract': 110, 'hold2': 15, 'shake': 401, 'open': 9}
+VARIANT dt2: invalid 0.6180 (969/1568), non-finite 0.4554, tendon ERROR worlds 0
+  tendon mu=0 0.6667 | tendon mu=0.3 0.5446 | per-joint 0.6920
+  by object: {np.str_('box40'): 0.634, np.str_('box50'): 0.955, np.str_('cyl30'): 0.286, np.str_('cyl40'): 0.411, np.str_('cyl50'): 0.647, np.str_('sphere50'): 0.491, np.str_('sphere60'): 0.902}
+  first value to break (same substep ties joined): {'link': 965, 'tendon_tension + link': 4}
+  phase of first break: {'close': 419, 'hold': 34, 'retract': 108, 'hold2': 19, 'shake': 379, 'open': 10}
+RATES_DONE
