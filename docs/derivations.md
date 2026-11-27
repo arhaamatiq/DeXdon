@@ -68,7 +68,7 @@ A worked example with `a = 6 mm`, `h = 8 mm`, `k = 0.1 N·m/rad`, `θ0 = 0`, `T 
   because the arm has grown from 8.0 mm to 8.94 mm.
 
 Assumptions: a massless inextensible-ish tendon (compliance is added
-separately), no gravity in E1/E2, frictionless revolute joints, springs linear in
+separately), no gravity in the single-finger runs, frictionless revolute joints, springs linear in
 angle, pinholes are points.
 
 ---
@@ -152,7 +152,7 @@ x = Σ_i [ l_i(θ0_i) − l_i(θ_i) ]  +  compliance · Σ_spans T
 
 With equal moment arms this pins `Σθ_i` to `x` no matter what friction does.
 Friction can only *redistribute* flexion between joints, and change the force.
-That is exactly what E2 measured.
+That is exactly what the close-open cycle measured.
 
 ---
 
@@ -266,7 +266,7 @@ released and every joint is back within 0.15 rad of its rest angle.
 
 | Choice | Reason |
 |---|---|
-| XPBD only | The handoff notes known CUDA tendon failures in VBD; one solver keeps the study consistent. |
+| XPBD only | One solver keeps the study consistent; VBD was left for later. |
 | Slider + position target, no winch | A zero-friction roller slips freely, and driven rollers need pre-tension. A slider anchors the tendon end, so actuation is identical at every `μ`. |
 | Pinholes, not rollers, at joints | Fixed roller wraps must stay in `[0, π]`. A pinhole has no wrap limit and its bend angle is exactly `θ/2`, which makes the closed form possible. |
 | Friction only at passive pinholes | Isolates the variable under study. The actuator coupling never changes. |
