@@ -132,6 +132,102 @@ The μ = 0 loop is slightly *negative* (the solver returns 0.65 mJ more than it 
 and shrinks five-fold when dt is halved: it is discretization error and sets the
 numerical floor, 2.4 % of the μ = 0.3 loop.
 
+## Recovering friction and stiffness from a trajectory
+
+If μ and k were not known, could they be read back from one close-open cycle? Both
+directions are used so that the friction loop separates μ from k.
+
+```bash
+python scripts/sysid.py                          # RTX 4090, writes results/sysid.json
+python -m pytest tests/test_sysid_gradients.py   # needs pytest
+```
+
+Ground truth is the Newton finger at a known (μ, k), with all three joints sharing k, on
+the cycle used above: 0 → 20 mm → 0, 4 s each way, 64 substeps × 32 iterations. Once per
+frame (480 frames) the run records the actuator's pull force and the three joint angles.
+The measurement is those angles plus Gaussian noise of 0.5° standard deviation, from a
+seed fixed per pair. The pull force is left noise-free.
+
+Gradient fit. Newton's routed tendons do not give gradients. Finalizing the model with
+`requires_grad=True` and stepping `SolverXPBD` under `wp.Tape` raises
+`NotImplementedError: Routed tendon simulation is not differentiable; finalize the model
+with requires_grad=False`. The sensitivity itself is there: a finite difference through
+the simulator gives d(fingertip height)/dμ = −1.151e-3 m over the same 40-substep rollout.
+So the fit runs on the closed-form finger from [derivations.md](derivations.md) instead,
+written as a float64 Warp kernel in `dexdon/sysid.py`. Each sample solves
+`k θ_i = T_i r_i(θ_i)` with `T_i = T0 e^(−μ w_i)` by 10 unrolled Newton iterations. On the
+opening branch a joint holds the angle it had at peak pull until the reverse-slip solution
+(the sign of μ flipped) falls below it, so `θ_i = min(θ_i at peak, reverse-slip θ_i)`. The
+loss is the mean squared angle residual, `wp.Tape` returns its gradient in (μ, k), and Adam
+runs 400 steps on (log μ, log k) from μ = 0.2, k = 0.12 N·m/rad.
+
+Brute force. A 64 × 64 grid over μ ∈ [0.02, 0.60] and k ∈ [0.05, 0.20] N·m/rad
+(spacing 0.0092 and 0.0024) is simulated as 4,096 Newton worlds in one batch, next to the
+ground-truth worlds. Each library world's angles are interpolated to the measured pull
+values, branch by branch, and the world with the smallest mean squared residual wins. The
+estimate is the minimum of a quadratic fitted to the 3 × 3 block of losses around it.
+
+Five held-out pairs were drawn once from a fixed seed (μ uniform in [0.10, 0.50], k in
+[0.06, 0.16]). During development the script ran with `--dev-only`, which simulates three
+other pairs and never the held-out ones. Nothing in either method was changed after the
+held-out pairs were first simulated.
+
+Held-out pairs, RTX 4090:
+
+| method | μ error, worst / mean | k error, worst / mean | trajectory RMSE | wall time |
+|---|---|---|---|---|
+| gradient fit of the closed form | 1.51 % / 0.83 % | 0.31 % / 0.23 % | 0.096–0.132° | 0.8 s per fit |
+| brute force, 4,096 simulated worlds | 0.41 % / 0.22 % | 0.11 % / 0.06 % | 0.047–0.302° | 34 s to build and 113 s to simulate the grid once, then 0.9 s per match |
+
+Trajectory RMSE is against the noise-free ground truth, over all frames and joints. For
+brute force it is the best grid world's trajectory, before the quadratic refinement.
+
+Every pair:
+
+| pair | μ | k [N·m/rad] | fit: μ error | fit: k error | fit: RMSE | brute force: μ error | brute force: k error | brute force: RMSE |
+|---|---|---|---|---|---|---|---|---|
+| development | 0.2000 | 0.1000 | +0.42 % | +0.30 % | 0.109° | −0.73 % | −0.01 % | 0.115° |
+| development | 0.3500 | 0.0800 | +0.47 % | +0.16 % | 0.127° | −0.17 % | −0.04 % | 0.302° |
+| development | 0.1200 | 0.1400 | +2.43 % | +0.40 % | 0.087° | +0.59 % | +0.02 % | 0.096° |
+| held-out | 0.2323 | 0.0722 | +1.03 % | +0.29 % | 0.131° | −0.41 % | +0.07 % | 0.302° |
+| held-out | 0.4615 | 0.1190 | +0.39 % | +0.19 % | 0.107° | +0.10 % | −0.04 % | 0.047° |
+| held-out | 0.4272 | 0.1374 | +0.35 % | +0.20 % | 0.098° | −0.01 % | −0.11 % | 0.143° |
+| held-out | 0.3868 | 0.1032 | +0.85 % | +0.16 % | 0.132° | +0.40 % | −0.08 % | 0.215° |
+| held-out | 0.1694 | 0.1099 | +1.51 % | +0.31 % | 0.096° | +0.19 % | +0.01 % | 0.110° |
+
+Both methods are inside 5 % on every pair. No world produced a tendon ERROR line or a
+non-finite state.
+
+What to keep in mind when reading these:
+
+- The fit's errors are all positive, in μ and in k, and largest at low μ. That is model
+  bias and not noise: the closed form is a simplification of the simulator, mostly in how
+  the pinholes stick and release after the turnaround.
+- Brute force is scored against the simulator that produced the ground truth, so it has
+  no model error by construction. Its numbers show what the noise and the grid spacing
+  cost, and nothing about how it would do on a finger the simulator does not match.
+- The gradient check failed once at the usual step. The script compares the tape gradient
+  with central finite differences at (1.1 μ, 0.9 k) of each fitted pair. With a relative
+  step of 1e-5 the two agree to 1.1e-8 or better on seven pairs and differ by 4.0 % on
+  held-out pair (0.4272, 0.1374). There, one sample (joint 3, one opening frame) sits
+  within the step of the switch from sticking to reverse slip, where the model has a
+  kink, and the finite difference straddles it. With a step of 1e-6 the agreement is
+  2.6e-10 on that pair and 4.0e-9 or better on all eight. The pytest test checks five
+  points on a synthetic cycle at the 1e-5 step, and the worst relative error there is
+  2.8e-9.
+- The script was run three times on the held-out pairs with `dexdon/sysid.py` unchanged,
+  the third time only to add the second finite-difference step to the check above. The
+  fit's errors were the same to the two decimals shown each time. The brute-force errors
+  moved by up to 0.02 percentage points on held-out pairs and 0.06 on a development pair,
+  because the GPU batch is not bitwise repeatable between runs. The table is the third
+  run.
+- The actuator target has to advance every substep. An earlier version of the batch moved
+  it once per frame, and the servo force then read low because the slider was
+  decelerating at the end of each frame. That was found and fixed on the development
+  pairs.
+- One noise draw per pair, one finger geometry, and the geometry (a, h, link lengths) is
+  taken as known. Only μ and k are fitted.
+
 ## Solver behaviour I ran into
 
 ```bash

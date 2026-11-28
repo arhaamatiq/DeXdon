@@ -33,6 +33,12 @@ Across `μ ∈ {0, 0.1, 0.2, 0.3, 0.5}` and joint angles up to 1.01 rad:
   maximum beyond 5 mm of travel);
 - tension ratio across each individual pinhole within 0.0008 of `e^(−μθ/2)`.
 
+Run the other way, the model identifies the finger: from one close-open cycle with 0.5° of
+angle noise, a `wp.Tape` gradient fit of the closed form recovers μ within 1.51 % and k within
+0.31 % on five held-out pairs, and a brute-force search over 4,096 simulated worlds recovers
+them within 0.41 % and 0.11 %
+([details](docs/results.md#recovering-friction-and-stiffness-from-a-trajectory)).
+
 ### Friction opens a loop in force and in pose, while tendon length pins total flexion
 
 ![hysteresis loops](figures/hysteresis.png)
@@ -217,5 +223,6 @@ not filtered.
 ---
 
 Reproduce: setup and every command are in [docs/results.md](docs/results.md). Layout: `dexdon/`
-(finger, closed form, hand harness), `experiments/` (runs, analysis, clips), `upstream/`
-(repro and measurement scripts), `docs/`, `results/`, `figures/`, `clips/`.
+(finger, closed form, hand harness, system identification), `experiments/` (runs, analysis,
+clips), `scripts/sysid.py`, `tests/`, `upstream/` (repro and measurement scripts), `docs/`,
+`results/`, `figures/`, `clips/`.
